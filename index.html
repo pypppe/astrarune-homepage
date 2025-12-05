@@ -1,15 +1,86 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <title>Please Wait...</title>
-   <meta http-equiv="refresh" content="0; url=https://home.astrarune.com">
-   <script>
-      window.location.href = "https://home.astrarune.com";
-   </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrong Site!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a; /* Dark grayish background */
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-   <h1>Redirecting...</h1>
-   <p>If you are not redirected automatically, <a href="https://home.astrarune.com">click here</a>.</p>
+    <div id="content">
+        <h1>Wrong site!</h1>
+        <p>We no longer use “astrarune.com”, click the button below to enter the new homepage.</p>
+        <div class="button-container">
+            <button onclick="enterSite()">Enter!</button>
+        </div>
+    </div>
+    <iframe id="new-homepage" class="hidden" src="https://home.astrarune.com"></iframe>
+
+    <script>
+        function enterSite() {
+            document.getElementById("content").style.display = "none";
+            document.getElementById("new-homepage").classList.remove("hidden");
+        }
+    </script>
 </body>
 </html>
-
